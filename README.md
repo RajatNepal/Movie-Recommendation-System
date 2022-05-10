@@ -1,11 +1,19 @@
 # CSE330
-# creative_temp
+# Final Project
 
 Rajat Nepal | 490732 | RajatNepal
 
 Chelsea Yuan | 490370 | chelsealyuan
 
 ---------------------------------------
+
+
+This website gives users a movie recommendation using a cosing similarity algorithm. Users can choose which movies they like/dislike. They can also comment on a movie's page.
+
+
+---------------------------------------
+
+
 
 TODO LIST:
 
