@@ -1,0 +1,29 @@
+{% extends "main/header.html" %} {% block content %} {% load crispy_forms_tags %}
+
+
+<div class="container">
+    <h1>{{movie.title}}</h1>
+    <a href="{{link}}" class="link-primary">{{movie.link}}</a>
+    <div>{{movie.description}} </div>
+</div>
+
+<hr>
+
+<h2>Comments</h2>
+
+{% if not movie.comments.all %} No Comments {% else %} {% for comment in movie.comments.all %}
+<strong>
+        {{comment.user}} - {{comment.timestamp}}
+    </strong>
+<br> {{ comment.body | linebreaks }} {% endfor %} {% endif %}
+<hr>
+
+
+<div class="card-body">
+    <h3>Leave a comment</h3>
+    <form method="post" style="margin-top: 1.3em;">
+        {{ comment_form | crispy}} {% csrf_token %}
+        <button type="submit" class="btn btn-primary  btn-lg">Submit</button>
+    </form>
+</div>
+{% endblock %}

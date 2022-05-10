@@ -1,0 +1,13 @@
+{% extends "main/header.html" %} {% block content %}
+
+
+<div class="container">
+    <h1>Your Recommendation Info</h1>
+    <br><br>
+    <a href="{{link}}" class="link-primary">{{link}}</a>
+    <div><h3>Your Movie Soulmate:</h3>{{soulmate}} </div><br><br>
+    <div><h3>Their email:</h3>{{soulmate_email}} </div><br><br>
+    <div><h3>Your cosine similarity with this person:</h3> {{cosine}} </div><br><br>
+    <div><h3>Based on this, we recommend the following movie:</h3> {{movie_rec}} </div>
+</div>
+{% endblock %}

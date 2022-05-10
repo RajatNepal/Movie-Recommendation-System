@@ -1,0 +1,16 @@
+{% extends "main/header.html" %} {% block content %} {% load crispy_forms_tags %}
+
+<!--form-->
+<div class="container py-5">
+    <h1>Survey</h1>
+    <br>
+    <h5>For each of the following movies, rate if you liked it , didnt like it, or have not seen it.
+    </h5><br><br>
+    <form method="POST">
+        {% csrf_token %} {{ rating_form|crispy }}
+        <button class="btn btn-primary" type="submit">Submit</button>
+    </form>
+    
+</div>
+
+{% endblock %}

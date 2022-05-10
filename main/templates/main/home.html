@@ -1,0 +1,16 @@
+{% extends 'main/header.html' %} {% block content %}
+
+<h1>Top Movies</h1>
+<div class=".card-columns">
+    {%for movie in all_movies%}
+    <div class="col-sm-6">
+        <div class="card" style="width: 18rem;">
+            <div class="card-body">
+                <h5 class="card-title">{{movie.title}}</h5>
+                <p class="card-text">{{movie.description}}</p>
+                <a href="{% url 'main:movies' movie.id %}" class="card-link">View</a>
+            </div>
+        </div>
+    </div>
+    {%endfor%}
+</div> {% endblock %}
